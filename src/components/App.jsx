@@ -1,5 +1,8 @@
-import {SearchBar} from "./Searchbar/Searchbar";
+import React from "react";
+import SearchBar from "./Searchbar/Searchbar";
 import css from './styles.module.css'
+
+
 export const App = () => {
 
 
