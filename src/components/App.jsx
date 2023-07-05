@@ -8,6 +8,7 @@ import Button from './Button/Button';
 import Modal from './Modal/Modal';
 import css from './styles.module.css'
 
+
 export class App extends Component {
   state = {
     page: 1,
@@ -93,6 +94,7 @@ export class App extends Component {
           {totalPage > page && <Button onClick={this.onClick} />}
         
         </div>
+     
           {status === 'modal' && <Modal forModal={forModal} toggleModale={this.toggleModale} />}
       </>
     );
