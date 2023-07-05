@@ -1,12 +1,12 @@
-import {ImageGalleryItem} from 'components/ImageGalleryItem/ImageGalleryItem';
+import PropTypes from 'prop-types';
 import css from '../styles.module.css'
 
-export default function ImageGallery() {
-  return (
-    <ul className={css.gallery}>
-      <ImageGalleryItem/>
-  
-    </ul>
-  );
-}
+const ImageGallery = ({ children }) => {
+  return <ul className={css.galleryimage}>{children}</ul>;
+};
 
+export default ImageGallery;
+
+ImageGallery.propTypes = {
+  children: PropTypes.object,
+};
