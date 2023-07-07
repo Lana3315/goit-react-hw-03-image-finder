@@ -13,9 +13,16 @@ const ImageGalleryItem = ({ data, onOpenModal }) => {
     </li>
   ));
 };
-export default ImageGalleryItem;
+
 
 ImageGalleryItem.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      largeImageURL: PropTypes.string.isRequired,
+      tags: PropTypes.string.isRequired
+    })
+  ).isRequired,
   onOpenModal: PropTypes.func.isRequired,
 };
+export default ImageGalleryItem;

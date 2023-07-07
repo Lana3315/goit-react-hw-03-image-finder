@@ -40,5 +40,8 @@ export default class Modal extends Component {
 
 Modal.propTypes = {
   toggleModale: PropTypes.func.isRequired,
-  forModal: PropTypes.object.isRequired,
+  forModal: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+  }).isRequired
 };
